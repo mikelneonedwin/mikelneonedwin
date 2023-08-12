@@ -4,7 +4,7 @@ Hello there! 👋 I'm Winner Edwin, a frontend web developer with a passion for 
 
 ## Technologies & Tools
 
-- Frontend: HTML, CSS, JavaScript, React, jQuery, TailwindCSS
+- Frontend: HTML, CSS, JavaScript, React, Vue, jQuery, TailwindCSS
 - Backend: Node.js, Express
 - Database: Firebase Realtime Database, MongoDB (in progress)
 - Hosting: Vercel
