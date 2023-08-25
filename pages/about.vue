@@ -73,7 +73,7 @@
       @apply border-b w-full flex sm:flex-col sm:items-start sm:truncate items-center py-2 gap-1 border-b-[#444];
     }
     tr {
-        @apply grid grid-cols-2 items-center w-full;
+        @apply grid grid-cols-2 gap-2 items-center w-full;
     }
     td b::after {
         content: ":"
