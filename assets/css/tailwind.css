@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body {
+    @apply text-[#f0f0f0] bg-[#141414] ;
+}
+@layer components {
+    .theme {
+        @apply text-[#00DC82];
+    }
+    .btn {
+        @apply flex items-center justify-center py-2 px-4 bg-[#00DC82] text-white font-medium rounded-3xl text-sm;
+    }
+    .cursor {
+        @apply w-1 bg-gray-200 whitespace-pre rounded-lg;
+    }
+    .title {
+        @apply text-4xl font-bold mt-6 mb-6;
+    }
+    .card {
+        @apply rounded-lg bg-[#212121] p-6 flex items-center justify-center flex-col gap-2;
+    }
+}
+* {
+    font-family: 'Roboto';
+    --theme: #00DC82;
+}
+.cursor::before {
+    content: " ";
+}
+.title+div:not([class]) {
+    @apply lg:flex mt-4 flex-col gap-4;
+}
+.card i {
+    @apply text-[--theme] mb-3 text-7xl font-bold;
+}
+.card h3 {
+    @apply font-bold text-2xl;
+}
+.card p {
+    @apply text-center;
+}
