@@ -28,6 +28,20 @@
                     </p>
                 </div>
             </div>
+            <div class="flex items-center justify-center mb-8 gap-16">
+                <a href="https://fb.me/mikelneonedwin" target="_blank">
+                    <img src="/svg/facebook.svg">
+                </a>
+                <a href="https://wa.me/2348076488738" target="_blank">
+                    <img src="/svg/whatsapp.svg">
+                </a>
+                <a href="https://github/mikelneonedwin" target="_blank">
+                    <img src="/svg/github.svg">
+                </a>
+                <a href="https://m.me/mikelneonedwin" target="_blank">
+                    <img src="/svg/facebook-messenger.svg">
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -51,5 +65,8 @@
 }
 nav+div {
     @apply sm:w-full;
+}
+div a img {
+    @apply h-8;
 }
 </style>
