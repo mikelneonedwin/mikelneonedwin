@@ -70,10 +70,10 @@
 <style type="text/tailwindcss">
     @tailwind components;
     td {
-      @apply border-b w-1/2 flex sm:flex-col sm:items-start sm:truncate items-center py-2 gap-1 border-b-[#444];
+      @apply border-b w-full flex sm:flex-col sm:items-start sm:truncate items-center py-2 gap-1 border-b-[#444];
     }
     tr {
-        @apply flex items-center gap-2;
+        @apply grid grid-cols-2 items-center w-full;
     }
     td b::after {
         content: ":"
