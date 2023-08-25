@@ -4,14 +4,14 @@
         <div class="flex flex-col gap-4 items-center justify-center w-full">
             <h2 class="text-center text-3xl text-[--theme] font-bold">Got Any Questions?</h2>
             <p class="font-bold">I'M AT YOUR SERVICE</p>
-            <div class="grid lg:grid-cols-4 sm:grid-cols-1 w-full gap-6 mt-8">
+            <div class="grid lg:grid-cols-2 lg:w-3/4 sm:grid-cols-1 w-full gap-6 mt-8">
                 <div class="cardx">
                     <i class="material-icons">phone</i>
                     <h3>Call</h3>
                     <p>+234 807 6488 738</p>
                 </div>
                 <div class="cardx">
-                    <i class="material-icons">gps_fixed</i>
+                    <i class="material-icons">location_on</i>
                     <h3>Address</h3>
                     <p>2b Akwa Ekpene Close, Uyo</p>
                 </div>
