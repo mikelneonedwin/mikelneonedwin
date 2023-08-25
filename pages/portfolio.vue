@@ -10,7 +10,7 @@
                         <h1 class="font-bold text-lg">{{ item.title }}</h1>
                         <div v-if="item.frameworks" class="text-left text-[--theme] font-semibold text-sm mr-1 rounded-lg">{{ item.frameworks.join(' & ') }}</div>
                         <p class="text-sm opacity-70">{{ item.description }}</p>
-                        <a :href="item.link" class="mt-1">
+                        <a :href="item.link" target="_blank" class="mt-1">
                             <button class="py-0.5 text-sm mr-1 px-4 rounded-lg bg-[--theme]">Visit</button>
                         </a>
                     </div>
