@@ -10,7 +10,7 @@
                         <tbody>
                             <tr>
                                 <td><b>Birthday</b> 26th June 2007</td>
-                                <td><b>Age</b> 17</td>
+                                <td><b>Age</b> 16</td>
                             </tr>
                             <tr>
                                 <td><b>Website</b> <a href="https://mikelneonedwin.vercel.app">mikelneonedwin.vercel.app</a></td>
