@@ -4,7 +4,7 @@
         <div>
             <h3 class="font-bold text-2xl">Hey there, I'm Winner Edwin – <b class="theme">a Web Developer</b></h3>
             <p class="leading-normal">With a knack for weaving innovation and elegance into digital experiences. Over 3 years, I've mastered TailwindCSS for crafting visually alluring websites, and seamlessly integrated Vue and React to bring projects like AudHub to life. My focus? Fast-loading, engaging interfaces, often fueled by the magic of Firebase. Passionate about Vue, JavaScript, and efficient design, I'm on a perpetual quest for web excellence. Let's collaborate and transform your ideas into exceptional digital marvels.</p>
-            <div class="lg:grid lg:grid-cols-2 lg:gap-3">
+            <div class="lg:grid lg:grid-cols-1 lg:gap-3 mt-4">
                 <div class="flex flex-col gap-5">
                     <table>
                         <tbody>
@@ -27,18 +27,20 @@
                         </tbody>
                     </table>
                     <div class="flex gap-4 items-center">
-                        <button class="btn">Download CV</button>
-                        <button class="btn">Hire Me</button>
+                        <!-- <button class="btn">Download CV</button> -->
+                        <a href="https://wa.me/2348076488738" target="_blank">
+                            <button class="btn">Hire Me</button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 sm:mt-4">
                 <h3 class="font-bold text-2xl">Skills</h3>
                 <div class="skills">
                     <button>HTML</button><button>CSS</button><button>JavaScript</button><button>TailwindCSS</button><button>jQuery</button><button>Vue.js</button><button>React.js</button><button>Nuxt.js</button><button>Firebase</button><button>Vercel</button><button>GitHub</button><button>Node.js</button><button>Express.js</button>
                 </div>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 sm:mt-4">
                 <h2 class="text-2xl font-bold">Experience</h2>
                 <div class="border-l-4 border-[--theme] ml-1 py-4 space-y-14">
                     <div>
@@ -70,10 +72,10 @@
 <style type="text/tailwindcss">
     @tailwind components;
     td {
-      @apply border-b w-full flex sm:flex-col sm:items-start sm:truncate items-center py-2 gap-1 border-b-[#444];
+      @apply border-b w-full flex sm:items-start sm:truncate items-center py-2 gap-1 border-b-[#444];
     }
     tr {
-        @apply grid grid-cols-2 gap-2 items-center w-full;
+        @apply grid lg:grid-cols-2 sm:grid-rows-2 gap-2 items-center w-full;
     }
     td b::after {
         content: ":"

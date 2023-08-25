@@ -12,4 +12,16 @@
 
 <script setup>
     const image = Array(6).fill(1).map((a,b) => '/projects/' + (a +b) + '.png');
+    const data = [
+        {
+            title: 'Rest Countries API',
+            frameworks: ['React', 'TailwindCSS'],
+            description: 'Rest Countries API with dark & light theme developed as party of my thirty days challenge',
+            link: 'https://30-smoky.vercel.app/18/',
+            img: '/projects/1.png'
+        },
+        {
+            title: ''
+        }
+    ]
 </script>
