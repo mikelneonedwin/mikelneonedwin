@@ -63,6 +63,13 @@
             frameworks: ['Vue.js', 'TailwindCSS'],
             img: '/projects/6.png',
             link: 'https://30-smoky.vercel.app/27/',
+        },
+        {
+            title: 'Todo App',
+            description: 'Todo app created for the thirty days coding challenge',
+            frameworks: ['Vue.js', 'TailwindCSS'],
+            img: '/projects/7.png',
+            link: 'https://30-smoky.vercel.app/26/',
         }
     ]
 </script>
