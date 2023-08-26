@@ -35,7 +35,7 @@
                 <a href="https://wa.me/2348076488738" target="_blank">
                     <img src="/svg/whatsapp.svg">
                 </a>
-                <a href="https://github/mikelneonedwin" target="_blank">
+                <a href="https://github.com/mikelneonedwin" target="_blank">
                     <img src="/svg/github.svg">
                 </a>
                 <a href="https://m.me/mikelneonedwin" target="_blank">
