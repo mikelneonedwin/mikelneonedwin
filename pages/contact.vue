@@ -5,28 +5,26 @@
             <h2 class="text-center text-3xl text-[--theme] font-bold">Got Any Questions?</h2>
             <p class="font-bold">I'M AT YOUR SERVICE</p>
             <div class="grid lg:grid-cols-2 lg:w-3/4 sm:grid-cols-1 w-full gap-6 mt-8">
-                <div class="cardx">
+                <a class="cardx" href="tel:2348076488738">
                     <i class="material-icons">phone</i>
                     <h3>Call</h3>
                     <p>+234 807 6488 738</p>
-                </div>
+                </a>
                 <div class="cardx">
                     <i class="material-icons">location_on</i>
                     <h3>Address</h3>
                     <p>2b Akwa Ekpene Close, Uyo</p>
                 </div>
-                <div class="cardx">
+                <a class="cardx" href="maiilto:mynameiswinneredwin@gmail.com">
                     <i class="material-icons">mail</i>
                     <h3>Email</h3>
-                    <p><a href="maiilto:mynameiswinneredwin@gmail.com">mynameiswinneredwin@gmail.com</a></p>
-                </div>
-                <div class="cardx">
+                    <p>mynameiswinneredwin@gmail.com</p>
+                </a>
+                <a class="cardx" href="https://mikelneonedwin.vercel.app">
                     <i class="material-icons">public</i>
                     <h3>Website</h3>
-                    <p>
-                        <a href="https://mikelneonedwin.vercel.app">https://mikelneonedwin.vercel.app</a>
-                    </p>
-                </div>
+                    <p>https://mikelneonedwin.vercel.app</p>
+                </a>
             </div>
             <div class="flex items-center justify-center mb-8 gap-16">
                 <a href="https://fb.me/mikelneonedwin" target="_blank">
@@ -48,7 +46,6 @@
 
 <style>
 @tailwind components;
-
 @layer components {
     .cardx {
         @apply rounded-lg p-6 flex items-center justify-center flex-col gap-2;
