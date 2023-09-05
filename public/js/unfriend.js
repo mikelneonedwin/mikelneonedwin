@@ -1,7 +1,7 @@
 /*
   Author: Winner Edwin
   File: unfriend.js
-  Description: The code in this file is meant to help facebook users unfriends friends in bulk
+  Description: The code in this file is meant to help facebook users unfriend friends in bulk
   Date: September 5, 2023
 */
 
