@@ -8,7 +8,7 @@
 **Messenger:** [winneredwin2667](https://m.me/winneredwin2667)  
 **WhatsApp:** [+2348076488738](https://wa.me/2348076488738)  
 **Telegram:** [mikelneonedwin](https://t.me/mikelneonedwin)  
-**Website:** [mikelneonedwin.vercel.app](https://mikelneonedwin.vercel.app)
+**Website:** [read.cv/winneredwin2667](https://read.cv/winneredwin2667)
 
 ---
 
@@ -37,7 +37,7 @@ I am a Fullstack web developer with a solid foundation in frontend technologies 
 **Lead Frontend Developer**  
 *Acadeva* (Startup)  
 [Acadeva GitHub Organization](https://github.com/Acadeva)  
-- Developing a study platform for Nigerian university students
+- We connect students to verified school news, study materials, timetables, updates, and creator content.
 - Utilizing React and Firebase
 - Leading the frontend development efforts
 
