@@ -8,7 +8,7 @@
 **Messenger:** [winneredwin2667](https://m.me/winneredwin2667)  
 **WhatsApp:** [+2348076488738](https://wa.me/2348076488738)  
 **Telegram:** [mikelneonedwin](https://t.me/mikelneonedwin)  
-**Website:** [read.cv/winneredwin2667](https://read.cv/winneredwin2667)
+**Portfolio:** [read.cv/winneredwin2667](https://read.cv/winneredwin2667)
 
 ---
 
@@ -87,4 +87,4 @@ I am a Fullstack web developer with a solid foundation in frontend technologies 
 
 ## Contact
 
-Feel free to connect with me via any of the provided social media links or visit my [personal website](https://mikelneonedwin.vercel.app) for more information.
+Feel free to connect with me via any of the provided social media links
