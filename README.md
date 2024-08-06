@@ -1,36 +1,90 @@
-# Winner Edwin - Frontend Web Developer
+# Winner Godswill Edwin
 
-Hello there! 👋 I'm Winner Edwin, a frontend web developer with a passion for creating amazing user interfaces and delightful web experiences. I love building things, and I'm always excited about taking on new challenges.
+**Email:** [winneredwin2667@gmail.com](mailto:winneredwin2667@gmail.com)  
+**Phone:** +2348076488738 / +2349017438399  
+**Twitter:** [@mikelneonedwin](https://x.com/mikelneonedwin)  
+**GitHub:** [mikelneonedwin](https://github.com/mikelneonedwin)  
+**Facebook:** [winneredwin2667](https://fb.me/winneredwin2667)  
+**Messenger:** [winneredwin2667](https://m.me/winneredwin2667)  
+**WhatsApp:** [+2348076488738](https://wa.me/2348076488738)  
+**Telegram:** [mikelneonedwin](https://t.me/mikelneonedwin)  
+**Website:** [mikelneonedwin.vercel.app](https://mikelneonedwin.vercel.app)
 
-## Technologies & Tools
+---
 
-- Frontend: HTML, CSS, JavaScript, React, Vue, jQuery, TailwindCSS
-- Backend: Node.js, Express
-- Database: Firebase Realtime Database, MongoDB (in progress)
-- Hosting: Vercel
+## Professional Summary
 
-## About Me
+I am a Fullstack web developer with a solid foundation in frontend technologies such as React, Vue, Next.js, Nuxt.js, and TailwindCSS. I leverage Firebase for backend services, including databases, authentication, and storage. My backend expertise includes Node.js and Express.js, and I am proficient in TypeScript. With four years of experience in web development, I use Git and GitHub to manage and organize my projects. I am passionate about building innovative web solutions and continuously expanding my skill set.
 
-I'm a frontend web developer who is eager to learn and grow in the world of web development. My journey began with HTML, CSS, and JavaScript, and I've come a long way since then. I have hands-on experience in building user interfaces with React and styling them using TailwindCSS. Additionally, I have utilized Google's Firebase for backend services, including the storage bucket for file storage and the real-time database for managing dynamic data. Moreover, I use Vercel for hosting my web projects.
+## Skills
 
-## Social Links
+- **Frontend:** HTML, CSS, JavaScript, React, Vue.js, Next.js, Nuxt.js, TailwindCSS
+- **Backend:** Node.js, Express.js, Firebase
+- **Languages:** TypeScript, Rust (in progress)
+- **Tools:** Git, GitHub
+- **Other Skills:** Literature writing, poetry, singing
 
-- WhatsApp: [+2348076488738](https://wa.me/2348076488738)
-- Facebook: [mikelneonedwin](https://fb.me/mikelneonedwin)
-- Email: 
-  - Personal: [michealanthonyxxx@gmail.com](mailto:michealanthonyxxx@gmail.com)
-  - Alternate: [mynameiswinneredwin@gmail.com](mailto:mynameiswinneredwin@gmail.com)
+## Education
 
-## Current Focus
+- **BSc in Computer Science** (in progress)  
+  University of Uyo
 
-I am currently learning backend development with Node.js and Express to build robust server-side applications. After mastering backend development, I plan to delve into MongoDB for database management, enabling me to create full-stack web applications that integrate a variety of technologies.
+- **Computer Training Course** (in progress)  
+  Manful
 
-## Future Endeavors
+## Experience
 
-As I continue to grow as a developer, I have ambitious plans to explore Android App Development, where I'll leverage my expertise in Java or Kotlin to craft amazing mobile experiences. Moreover, I'm looking forward to diving deeper into backend web development with technologies like PHP and MySQL.
+**Lead Frontend Developer**  
+*Acadeva* (Startup)  
+[Acadeva GitHub Organization](https://github.com/Acadeva)  
+- Developing a study platform for Nigerian university students
+- Utilizing React and Firebase
+- Leading the frontend development efforts
+
+**Intern Developer**  
+*Victor Olatunji (VickyJay)*  
+- Contributing to various projects under senior developer mentorship
+- Participated in a 30-day project-building challenge
+- Mentor: Victor Olatunji ([Twitter](https://x.com/HeyVickyJay))
+
+**Web Developer**  
+*3Layersz*  
+[3Layersz GitHub Organization](https://github.com/3Layersz)  
+- Building websites for clients and businesses
+- Collaborating with a team led by Paul Fruitful ([Twitter](https://x.com/Paulfruitful_))
+
+## Projects
+
+**30 Days Challenge**  
+[GitHub Repository](https://github.com/mikelneonedwin/30)  
+- Completed a project every day for 30 days
+- Learned and applied various frameworks and technologies
+
+**Music Streaming Website**  
+- Developed using Firebase and React.js
+- Gained practical experience in creating functional web applications
+
+**Roidy**  
+[GitHub Repository](https://github.com/mikelneonedwin/Roidy)  
+- Desktop application to interact with Android devices from a PC
+- Utilizes CLI tools, React, ADB, and Express.js
+- Lead developer and originator of the project
+
+**30 Days Challenge Submission Platform**  
+[Live Deployment](https://30days-proto.vercel.app)  
+- Partnered with Victor Olatunji to build the platform
+- Currently a work in progress
+
+## Open Source Contributions
+
+- **Roidy:** Lead developer of an open-source desktop application
+
+## Interests
+
+- Building innovative web solutions
+- Learning about computer operations and low-level programming
+- Literature writing, poetry, and singing
 
 ## Contact
 
-Feel free to reach out to me via any of the social links provided above or either of my email addresses. Whether it's about collaboration, project ideas, or just to say hello, I'm always happy to connect with fellow developers and enthusiasts.
-
-Let's build something incredible together! 🚀
+Feel free to connect with me via any of the provided social media links or visit my [personal website](https://mikelneonedwin.vercel.app) for more information.
