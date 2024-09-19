@@ -12,7 +12,7 @@
 
 ---
 
-## Professional Summary
+## About Me
 
 I am a Fullstack web developer with a solid foundation in frontend technologies such as React, Vue, Next.js, Nuxt.js, and TailwindCSS. I leverage Firebase for backend services, including databases, authentication, and storage. My backend expertise includes Node.js and Express.js, and I am proficient in TypeScript. With four years of experience in web development, I use Git and GitHub to manage and organize my projects. I am passionate about building innovative web solutions and continuously expanding my skill set.
 
