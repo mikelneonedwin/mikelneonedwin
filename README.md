@@ -15,4 +15,4 @@ If it’s a challenge or something cool, count me in.
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=mikelneonedwin&show_icons=true&theme=tokyonight)  
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mikelneonedwin&layout=compact&theme=tokyonight)  
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=mikelneonedwin&theme=tokyonight)
+[![GitHub Streak](https://streak-stats.demolab.com?user=mikelneonedwin&theme=tokyonight)](https://git.io/streak-stats)
