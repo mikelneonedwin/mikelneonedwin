@@ -1,0 +1,107 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+          "tsserver": {
+            "maxTsServerMemory": 1024,
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+          "tsserver": {
+            "maxTsServerMemory": 1024,
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "tsserver": {
+          "maxTsServerMemory": 1024,
+        },
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "lint": {
+          "suggestCanonicalClasses": "ignore",
+        },
+      },
+    },
+  },
+  "cli_default_open_behavior": "existing_window",
+  "auto_update": false,
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.organizeImports": true,
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "project_panel": {
+    "dock": "left",
+    "sticky_scroll": false,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "My Theme",
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_features": { "calt": false },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+    // "OpenCode": {
+    //   "default_config_options": {
+    //     "mode": "build",
+    //     "model": "opencode/deepseek-v4-flash-free",
+    //   },
+    //   "type": "custom",
+    //   "command": "/home/winner/.opencode/bin/opencode",
+    //   "args": ["acp"],
+    //   "env": {},
+    // },
+    // "Antigravity CLI": {
+    //   "default_config_options": {
+    //     "model": "gemini-3.6-flash-low",
+    //   },
+    //   "type": "custom",
+    //   "command": "/home/winner/Downloads/agy-acp-linux-x64",
+    // },
+  },
+}
