@@ -1,0 +1,11 @@
+{
+  "Export SVG": {
+    "prefix": "esvg",
+    "body": [
+      "export const $1: FC<ComponentProps<\"svg\">> = (props) => (",
+      "\t$2",
+      ")"
+    ],
+    "description": "Export an SVG"
+  }
+}

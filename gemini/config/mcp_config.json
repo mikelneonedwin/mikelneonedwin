@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "notion": {
+      "serverUrl": "https://mcp.notion.com/mcp"
+    },
+    "helium": {
+      "command": "bunx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--userDataDir",
+        "/home/winner/.agents/helium",
+        "--executablePath",
+        "/usr/bin/helium"
+      ]
+    }
+  }
+}

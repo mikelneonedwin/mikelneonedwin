@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-wakatime"],
+  "mcp": {
+    "notion": {
+      "url": "https://mcp.notion.com/mcp",
+      "type": "remote",
+    },
+    "helium": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "chrome-devtools-mcp@latest",
+        "--userDataDir",
+        "/home/winner/.agents/helium",
+        "--executablePath",
+        "/usr/bin/helium",
+      ],
+    },
+  },
+}

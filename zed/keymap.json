@@ -1,0 +1,80 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-shift-down": [
+        "editor::AddSelectionBelow",
+        {
+          "skip_soft_wrap": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-down": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-alt-shift-down": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "BufferSearchBar && in_replace > Editor",
+    "bindings": {
+      "ctrl-alt-enter": "search::ReplaceAll"
+    }
+  },
+  {
+    "context": "BufferSearchBar && in_replace > Editor",
+    "unbind": {
+      "ctrl-enter": "search::ReplaceAll"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-i": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-space": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f": "editor::Format"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-shift-i": "editor::Format"
+    }
+  }
+]
