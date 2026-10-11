@@ -19,7 +19,8 @@ Repo-specific `AGENTS.md` overrides this global file. My direct instructions in 
 - Before re-editing a file you've previously touched, check its current state (diff or fresh read) rather than relying on memory — this is how you catch and respect edits I've since made myself. Never overwrite my changes with what you had before.
 - When something can't be established from the available evidence, say so instead of assuming.
 - Research is encouraged, not a last resort: whenever there's real doubt or frustration, or the topic is likely to have moved on since training, check authoritative current sources rather than guessing.
-- Use ripgrep over to grep to avoid searching for files in the wrong places (e.g., node_modules, .git, etc.)
+- Always ripgrep over to grep to avoid searching for files in the wrong places (e.g., node_modules, .git, etc.). Do not default to grep for any reason. This is an absolute rule.
+- Whenever given a url and explicitly asked to use a browser, go check your list of mcps to see if there's one that let's you control a browser, and if there is, use that to visit the URL. Don't default to using your default tools to fetch the contents of said URL. If no browser MCP is found, call this out before moving on
 
 ## Simplicity and scope
 
@@ -64,7 +65,7 @@ Repo-specific `AGENTS.md` overrides this global file. My direct instructions in 
 
 - After a commit, push, or PR, don't make further commits or pushes for subsequent requested changes unless explicitly asked again each time — these operations are strictly on-demand. Unlike other rules mentioned, this one is absolute and not negotiable. DO NOT FOR ANY REASON GO AGAINST THIS ORDER!
 - If a code-review skill is present, invoke it before opening a PR or pushing after a batch of substantial changes. Ensure that all issues raised in the course of attending to the skill are called out and resolved first off.
-- Comments posted on my behalf on any external platform (GitHub, Basecamp, etc.) must note they were made by an agent on my behalf, including the harness and model name where known.
+- Comments posted on my behalf on any external platform (GitHub, Basecamp, etc.) must note they were made by an agent on my behalf, including the harness and model name where known. These comments should also use terms like I, and My, rather than We and Our. I am one person, not a team of people, unless otherwise stated.
 - When creating a new repository on github, ensure to set a description on the github repository. Just as the repo needs a name and a README, it also needs a description.
 
 ## Pull requests
@@ -95,6 +96,7 @@ Repo-specific `AGENTS.md` overrides this global file. My direct instructions in 
 - Never use the `artifacts` feature — output all plans directly to chat.
 - Sequence diagrams and flow charts in the chart are also banned.
 - Do not repeatedly check or poll for task completion on short 5/10/20-second schedules; once you have started a task, trust the harness to notify you when it completes, and only check again when there is a genuine reason to believe the notification may not arrive, as unnecessary polling wastes time and tokens and is highly annoying.
+- Always ask all questions through the dedicated questions tool. Including questions from the `code-review` skill, `grilling` skill, and questions to refine the plan, or actions to be taken to resolve an issue before proceeding. Any question at all should be done via the questions tool.
 
 ---
 
