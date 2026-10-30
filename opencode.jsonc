@@ -5,18 +5,17 @@
   "mcp": {
     "notion": {
       "url": "https://mcp.notion.com/mcp",
-      "type": "remote",
+      "type": "remote"
     },
-    "helium": {
+    "helium-browser": {
       "type": "local",
       "command": [
         "bunx",
-        "chrome-devtools-mcp@latest",
-        "--userDataDir",
-        "/home/winner/.agents/helium",
-        "--executablePath",
-        "/usr/bin/helium",
-      ],
-    },
-  },
+        "-y",
+        "helium-devtools-mcp@1.1.1-helium.1",
+        "--autoConnect"
+      ]
+    }
+  }
 }
+

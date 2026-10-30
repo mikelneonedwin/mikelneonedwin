@@ -3,24 +3,14 @@
     "notion": {
       "serverUrl": "https://mcp.notion.com/mcp"
     },
-    "helium": {
+    "helium-browser": {
       "command": "bunx",
       "args": [
         "-y",
-        "chrome-devtools-mcp@latest",
-        "--userDataDir",
-        "/home/winner/.agents/helium",
-        "--executablePath",
-        "/usr/bin/helium"
-      ]
-    },
-"helium-browser": {
-      "command": "bunx",
-      "args": [
-        "-y",
-      	"helium-devtools-mcp@1.1.1-helium.1",
+        "helium-devtools-mcp@1.1.1-helium.1",
         "--autoConnect"
       ]
     }
   }
 }
+
