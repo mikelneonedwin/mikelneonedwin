@@ -24,9 +24,47 @@ Use your questions tool for every question, in every harness. Before asking anyt
 
 ## Searching and reading on a slow machine
 
-My laptop is an HP EliteBook 840 G1 with a hard drive, so careless searches can run for ten minutes or more. Never run find against my home directory or against a project root that contains node_modules, dist, .next or similar. Craft every search to touch as few files as possible. Prefer ripgrep with a narrow path and a glob. To locate files by name, use rg --files piped into rg, or fd, since both skip ignored directories by default. fzf is fine in its non-interactive filter mode, but never launch it interactively. If you don't know where something lives or how to search for it cheaply, look it up online first and then search, instead of brute-forcing the disk.
+My laptop is an HP EliteBook 840 G1 with a hard drive, so careless searches can run for ten minutes or more. Be deliberate about search scope, but don't confuse minimizing disk access with minimizing the number of commands executed. One well-planned search across several relevant directories is preferable to repeatedly searching the same directories for different keywords.
 
-When you need to change code, find the target in one step. Run ripgrep with line numbers and a generous context window, something like rg -n -C 15 "pattern" path/to/file, which shows the match and its surroundings with line numbers in a single call. If the file is under a few hundred lines or you are unsure where the target is, read the whole file once and stop hunting. Do not read the same file in several differently sized chunks, and do not re-read a range you have already seen unless the file changed since. If you notice yourself about to repeat a read, you already have what you need, so make the edit. Prefer edit tools that replace an exact string over ones that depend on line numbers, because they survive small shifts.
+Never run find against my home directory or against a project root that contains node_modules, dist, .next or similar. To locate files by name, use rg --files piped into rg, or fd, since both skip ignored directories by default. fzf is fine in its non-interactive filter mode, but never launch it interactively.
+
+**Consolidate searches by default.** Before searching, identify the relevant concepts, keywords, identifiers, function names, error messages and likely locations from the task. Combine related search objectives into one ripgrep invocation using multiple -e patterns, regex alternation, multiple search paths and appropriate context flags. Ripgrep supports searching for multiple patterns in the same invocation, so use that capability instead of launching separate commands for each pattern.
+
+For example, when investigating an API failure involving downtime, authentication and Redis, don't do this:
+
+```bash
+rg --files
+rg -n -C 5 "downtime" web/
+rg -n -C 5 "service" web/lib/
+rg -n -C 5 "api/limit-swap" web/
+rg -n -C 5 "waking up" web/
+rg -n -C 5 "502|503|504" web/
+rg -n -C 5 "redis" api/src/
+rg -n -C 5 "health" api/
+rg -n -C 5 "authenticate" web/app/swap/
+```
+
+Do this instead:
+
+```bash
+rg -n -i -C 4 --heading \
+  -e 'downtime|waking up|momentarily waking up' \
+  -e '502|503|504|service unavailable|bad gateway' \
+  -e 'limit-swap|limitSwapClient|api/limit-swap' \
+  -e 'toast|ensureAuthenticated|authenticate' \
+  -e 'redis|getClient|health(check)?|cron|interval|railway' \
+  web/ api/
+```
+
+The patterns above are examples, not a fixed vocabulary. Adapt them to the task and include all reasonably anticipated investigative dimensions in the initial search. Use specific identifiers and error messages where available, rather than generic terms that produce excessive noise. Adjust the search paths to the actual project structure.
+
+Do not run rg --files just to familiarize yourself with a repository before searching its contents. Ripgrep can search directories directly while respecting ignore rules. The initial content search should reveal the relevant files. Enumerate filenames separately only when locating files by name is itself the objective.
+
+**Treat the initial search as reconnaissance, not a sequence of discovery steps.** Plan what you need to establish before executing the search, gather the relevant evidence together, and analyze the results as a whole. Do not immediately launch another search because you noticed another keyword, function or file in the results. First determine whether the information you already have answers the question. Only perform a follow-up search when the initial results expose a concrete information gap that cannot reasonably be resolved from the existing results. Follow-up searches should investigate that gap directly rather than repeat or slightly broaden the original search.
+
+When you need to change code, find the target in one step. Run ripgrep with line numbers and a generous context window, something like `rg -n -C 15 "pattern" path/to/file`, when the target is not already known. If the file is under a few hundred lines or you are unsure where the target is, read the whole file once and stop hunting. Do not read the same file in several differently sized chunks, and do not re-read a range you have already seen unless the file changed since. Prefer edit tools that replace an exact string over ones that depend on line numbers, because they survive small shifts.
+
+The objective is to minimize total disk access, redundant investigation and unnecessary tool invocations. Prefer one comprehensive reconnaissance search, followed by reading the relevant files and narrowly targeted follow-ups only when necessary. Do not sacrifice investigation quality, but do not turn a single investigation into a sequence of micro-searches.
 
 ## Validation, builds and checks
 
