@@ -10,7 +10,9 @@
         "helium-devtools-mcp@1.1.1-helium.1",
         "--autoConnect"
       ]
+    },
+    "modools": {
+      "serverUrl": "https://mcp-production-49056b49.up.railway.app/mcp"
     }
   }
 }
-
