@@ -109,3 +109,9 @@ When an OpenAPI spec is provided, set up Kygger (npmjs.com/package/kygger) as th
 When a framework such as Vite or Next.js supports file imports, import binary assets into the code as variables and don't drop them into a public folder to be loaded by path. Imports tell me immediately if an asset is missing, and they let the framework do its optimization work.
 
 When you integrate an API into a frontend, show a skeleton while data loads and not a "Loading..." string. This would be an absolute rule if not for a few rare cases where plain text really is the right answer, so wherever a skeleton can fit, use one. Mocks are enemies of the codebase. Once I give you an endpoint to replace a mocked one, remove every mock for that endpoint, everywhere it appears, because API integration means all data is live. If a codebase truly does need mocks or fallbacks, keep all of them in one dedicated top-level folder and never scatter pieces through components and files, so I can find, change and clean them up in one place.
+
+## Antigravity in T3 Code
+
+Do not use invoke_subagent. Every subagent or reviewer must be launched via T3 Code's delegate_task tool so it appears in the T3 Code UI and registers with the orchestrator. Under the Antigravity ACP binding in T3 Code, emitting an interim update without active tool calls prematurely ends the turn and halts your execution. Whenever you need to report progress or pause before continuing sequential work, call schedule_task (or mcp_t3-code_schedule_task) in that same step before ending the turn. Use bindToCurrentThread set to true with a one-time schedule where type is once and runAt is set to one or two minutes in the future, with prompt set to resume the specific next action. Output your update and end the turn. When T3 Code fires the scheduled task and wakes you up, pick up execution immediately.
+
+
