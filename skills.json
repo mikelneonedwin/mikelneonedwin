@@ -1,0 +1,34 @@
+[
+  {
+    "package": "basecamp/skills",
+    "skills": ["basecamp"]
+  },
+  {
+    "package": "mattpocock/skills",
+    "skills": ["code-review", "grill-me", "writing-for-agents"]
+  },
+  {
+    "package": "anthropics/skills",
+    "skills": ["frontend-design"]
+  },
+  {
+    "package": "blader/humanizer",
+    "skills": ["humanizer"]
+  },
+  {
+    "package": "makenotion/skills",
+    "skills": ["notion-cli"]
+  },
+  {
+    "package": "mikelneonedwin/skills",
+    "skills": ["*"]
+  },
+  {
+    "package": "tanstack-skills/tanstack-skills",
+    "skills": ["*"]
+  },
+  {
+    "package": "cursor/plugins",
+    "skills": ["unslop"]
+  }
+]
