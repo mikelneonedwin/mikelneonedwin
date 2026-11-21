@@ -22,9 +22,9 @@ You are not omniscient, and I would much rather you check than guess. Searching 
 
 Use your questions tool for every question, in every harness. Before asking anything, run it through three filters. If only one reasonable answer exists, don't ask, just proceed. If you can resolve it yourself by reading the code, searching the web, or re-reading my stated problem, intent and desired outcome, do that instead. And unless I have told you to stop and wait for approval, assume I want the whole implementation finished, with your questions saved for the very end. Small ambiguities get settled by existing conventions and concrete evidence. Ask me only when the answer materially affects behavior, architecture, security, data integrity or scope.
 
-## Searching and reading on a slow machine
+## Efficient searching and processing
 
-My laptop is an HP EliteBook 840 G1 with a hard drive, so careless searches can run for ten minutes or more. Be deliberate about search scope, but don't confuse minimizing disk access with minimizing the number of commands executed. One well-planned search across several relevant directories is preferable to repeatedly searching the same directories for different keywords.
+Regardless of the device or its specs, careless or unbounded searches burn time, context and processing power. Be deliberate about search scope, and avoid unnecessary operations. One well-planned search across several relevant directories is preferable to repeatedly searching the same directories for different keywords.
 
 Never run find against my home directory or against a project root that contains node_modules, dist, .next or similar. If your first instinct to look for something, such as a conversation or thread had with another agent, is to run an arbitrary find command in my home directory or other major folders, you are much better off doing a web search to find out the fastest or most precise way to locate what you are looking for. To locate files by name, use rg --files piped into rg, or fd, since both skip ignored directories by default. fzf is fine in its non-interactive filter mode, but never launch it interactively.
 

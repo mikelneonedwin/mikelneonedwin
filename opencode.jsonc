@@ -7,6 +7,10 @@
       "url": "https://mcp.notion.com/mcp",
       "type": "remote"
     },
+    "modools": {
+      "url": "https://mcp.modools.app/mcp",
+      "type": "remote"
+    },
     "helium-browser": {
       "type": "local",
       "command": [

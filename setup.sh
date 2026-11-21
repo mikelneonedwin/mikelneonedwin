@@ -287,7 +287,9 @@ setup_agents_md() {
   # 2. OpenCode (global instructions)
   link_path "$AGENTS_FILE" "$HOME/.config/opencode/AGENTS.md"
 
-  # 3. Antigravity (global rules in ~/.gemini/config/)
+  # 3. Antigravity and T3 Code (global rules in ~/.gemini/ and ~/.gemini/config/)
+  link_path "$AGENTS_FILE" "$HOME/.gemini/AGENTS.md"
+  link_path "$AGENTS_FILE" "$HOME/.gemini/GEMINI.md"
   link_path "$AGENTS_FILE" "$HOME/.gemini/config/AGENTS.md"
   link_path "$AGENTS_FILE" "$HOME/.gemini/config/GEMINI.md"
 
@@ -892,6 +894,11 @@ run_bash_installer \
     "Antigravity CLI" \
     "https://antigravity.google/cli/install.sh" \
     "agy"
+
+if command_exists agy; then
+    info "Installing Antigravity WakaTime plugin..."
+    agy plugin install https://github.com/wakatime/antigravity-cli-wakatime || warning "Failed to install Antigravity WakaTime plugin."
+fi
 
 run_bash_installer \
     "OpenCode" \
