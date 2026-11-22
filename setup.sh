@@ -414,6 +414,7 @@ BASE_APT_PACKAGES=(
     zip
     build-essential
     gnupg
+    pipx
 )
 
 MISSING_BASE_PACKAGES=()
@@ -1022,7 +1023,30 @@ else
 fi
 
 # ------------------------------------------------------------
-# 16. Snap packages
+# 16. picosnitch
+# ------------------------------------------------------------
+
+info "Checking picosnitch..."
+
+if command_exists picosnitch; then
+    success "picosnitch is already installed. Skipping pipx install."
+else
+    info "Installing picosnitch via pipx..."
+    sudo pipx install picosnitch --global
+    success "picosnitch installed."
+fi
+
+if systemctl is-enabled picosnitch >/dev/null 2>&1; then
+    success "picosnitch service is already enabled."
+else
+    info "Configuring and enabling picosnitch service..."
+    sudo picosnitch systemd
+    sudo systemctl enable --now picosnitch
+    success "picosnitch service configured and running."
+fi
+
+# ------------------------------------------------------------
+# 17. Snap packages
 # ------------------------------------------------------------
 
 command_exists snap || die "snap is required to install Snap applications."
@@ -1044,7 +1068,7 @@ else
 fi
 
 # ------------------------------------------------------------
-# 17. Shell aliases
+# 18. Shell aliases
 # ------------------------------------------------------------
 
 info "Configuring shell aliases..."
@@ -1060,7 +1084,7 @@ fi
 success "Shell configuration updated."
 
 # ------------------------------------------------------------
-# 18. Workspace repositories
+# 19. Workspace repositories
 # ------------------------------------------------------------
 
 WORKSPACE_REPOS=(
@@ -1231,7 +1255,7 @@ else
 fi
 
 # ------------------------------------------------------------
-# 19. Authentication
+# 20. Authentication
 # ------------------------------------------------------------
 
 info "Checking CLI authentication..."
@@ -1286,7 +1310,7 @@ if command_exists devin; then
 fi
 
 # ------------------------------------------------------------
-# 20. Manual reminders
+# 21. Manual reminders
 # ------------------------------------------------------------
 
 cat <<'EOF'
