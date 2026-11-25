@@ -685,6 +685,7 @@ SYSTEM_APT_PACKAGES=(
     helium-bin
     spotify-client
     gnome-shell-extension-manager
+    gthumb
     ffmpeg
     xclip
 )
@@ -865,6 +866,7 @@ BUN_GLOBAL_PACKAGES=(
     vercel
     @railway/cli
     @github/copilot
+    cloc
 )
 
 INSTALLED_BUN_GLOBALS="$(bun pm ls -g 2>/dev/null || true)"
@@ -1068,7 +1070,87 @@ else
 fi
 
 # ------------------------------------------------------------
-# 18. Shell aliases
+# 18. Go
+# ------------------------------------------------------------
+
+info "Setting up Go..."
+
+GO_VERSION="1.27.4"
+GO_ARCHIVE="go${GO_VERSION}.linux-amd64.tar.gz"
+GO_DOWNLOAD_URL="https://go.dev/dl/${GO_ARCHIVE}"
+GO_ARCHIVE_PATH="$CACHE_DIR/$GO_ARCHIVE"
+GO_SHA256_PATH="$CACHE_DIR/${GO_ARCHIVE}.sha256"
+
+if [[ -x /usr/local/go/bin/go ]] \
+    && [[ "$(/usr/local/go/bin/go version)" == *"go${GO_VERSION} "* ]]; then
+    success "Go $GO_VERSION is already installed. Skipping."
+else
+    info "Downloading Go $GO_VERSION..."
+
+    if [[ ! -f "$GO_ARCHIVE_PATH" ]]; then
+        download "$GO_DOWNLOAD_URL" "$GO_ARCHIVE_PATH"
+        download "${GO_DOWNLOAD_URL}.sha256" "$GO_SHA256_PATH"
+    fi
+
+    GO_EXPECTED_SHA256="$(awk '{print $1}' "$GO_SHA256_PATH")"
+    GO_ACTUAL_SHA256="$(sha256sum "$GO_ARCHIVE_PATH" | awk '{print $1}')"
+
+    [[ "$GO_ACTUAL_SHA256" == "$GO_EXPECTED_SHA256" ]] \
+        || die "SHA-256 verification failed: $GO_ARCHIVE"
+
+    success "SHA-256 verified."
+
+    info "Installing Go to /usr/local..."
+    sudo rm -rf /usr/local/go
+    sudo tar -C /usr/local -xzf "$GO_ARCHIVE_PATH"
+
+    success "Go $GO_VERSION installed."
+fi
+
+# Make Go available to the rest of this script run.
+export PATH="$PATH:/usr/local/go/bin"
+
+command_exists go || die "Go installation failed."
+
+success "Go $(go version | awk '{print $3}') verified."
+
+if ! grep -Fq 'export PATH="$PATH:/usr/local/go/bin"' "$HOME/.bashrc"; then
+    cat >> "$HOME/.bashrc" <<'EOF'
+
+# Go
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
+EOF
+elif ! grep -Fq 'export PATH="$PATH:$(go env GOPATH)/bin"' "$HOME/.bashrc"; then
+    printf '\nexport PATH="$PATH:$(go env GOPATH)/bin"\n' >> "$HOME/.bashrc"
+fi
+
+# ------------------------------------------------------------
+# 19. Rust
+# ------------------------------------------------------------
+
+info "Setting up Rust..."
+
+if command_exists cargo && command_exists rustc; then
+    success "Rust ($(rustc --version)) is already installed. Skipping."
+else
+    info "Installing Rust via rustup..."
+
+    download \
+        "https://sh.rustup.rs" \
+        "$TEMP_DIR/rustup-init.sh"
+
+    sh "$TEMP_DIR/rustup-init.sh" -y
+
+    export PATH="$HOME/.cargo/bin:$PATH"
+
+    command_exists cargo || die "Rust installation failed."
+
+    success "Rust installed."
+fi
+
+# ------------------------------------------------------------
+# 20. Shell aliases
 # ------------------------------------------------------------
 
 info "Configuring shell aliases..."
@@ -1084,7 +1166,7 @@ fi
 success "Shell configuration updated."
 
 # ------------------------------------------------------------
-# 19. Workspace repositories
+# 21. Workspace repositories
 # ------------------------------------------------------------
 
 WORKSPACE_REPOS=(
@@ -1255,7 +1337,7 @@ else
 fi
 
 # ------------------------------------------------------------
-# 20. Authentication
+# 22. Authentication
 # ------------------------------------------------------------
 
 info "Checking CLI authentication..."
@@ -1310,7 +1392,7 @@ if command_exists devin; then
 fi
 
 # ------------------------------------------------------------
-# 21. Manual reminders
+# 23. Manual reminders
 # ------------------------------------------------------------
 
 cat <<'EOF'
